@@ -35,7 +35,8 @@ public class ArcherTower implements Building {
  
     @Override
     public String get_BUILDING_name() {
-        return  getBuildingName();
+        // return  getBuildingName();
+        return this.buildingName;
     }
    
 
@@ -72,7 +73,7 @@ public class ArcherTower implements Building {
     }
 
     public void info(){
-        System.out.println("\n" +getBuildingName()+"\nStatus = "+this.getStatus()+"\nHP = "+this.getHP());
+        System.out.println("\n" +this.getBuildingName()+"\nStatus = "+this.getStatus()+"\nHP = "+this.getHP());
     }
 
 //    ============================================================================
@@ -99,7 +100,7 @@ public class ArcherTower implements Building {
 
      
     public String getBuildingName() {
-        return buildingName;
+        return this.buildingName;
     }
 
     public void setBuildingName(String buildingName) {
