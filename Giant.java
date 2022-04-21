@@ -38,7 +38,7 @@ public class Giant implements Troops {
     public void attackBuilding(Building building) {
         if(building.get_BUILDING_status().equalsIgnoreCase("unBroken")){
             if(this.getStatus().equalsIgnoreCase("Alive")){
-                System.out.println("Giant "+ building.get_BUILDING_name());
+                System.out.println(this.get_TROOP_Name() + " menyerang Single Target "+ building.get_BUILDING_name());
                 building.adjust_Building_HP(building.get_BUILDING_HP(), this.getAttackPower());
             }else{
                 System.out.println("===================");
@@ -54,7 +54,7 @@ public class Giant implements Troops {
 
     @Override
     public void moveForward() {
-        System.out.println("Giant maju kedepan berjalan di darat");
+        System.out.println(this.getTroopName() + " maju kedepan berjalan di darat");
     }
 
     @Override

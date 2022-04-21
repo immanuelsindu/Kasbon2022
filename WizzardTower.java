@@ -1,11 +1,11 @@
-public class ArcherTower implements Building {
+public class WizzardTower implements Building {
     private double attackPower;
     private double HP;
     private String material;
     private String buildingName;
     private String status;
 
-    public ArcherTower(double attackPower, double HP, String material, String buildingname){
+    public WizzardTower(double attackPower, double HP, String material, String buildingname){
         this.HP = HP;
         this.attackPower = attackPower;
         this.material = material;
@@ -18,7 +18,7 @@ public class ArcherTower implements Building {
     public void attackTarget(Troops troops) {
         if(this.getStatus().equalsIgnoreCase("unBroken")){
             if(troops.get_TROOP_Status().equalsIgnoreCase("Alive")){
-                System.out.println(this.getBuildingName() + " menyerang Single Target "+ troops.get_TROOP_Name());
+                System.out.println(this.getBuildingName() + " menyerang Area Target "+ troops.get_TROOP_Name());
                 troops.adjustHPTroops(troops.getHPTroops(), this.getAttackPower());
             }else{
                 System.out.println("===================");

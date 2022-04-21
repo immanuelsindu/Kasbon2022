@@ -1,5 +1,4 @@
 public interface Building {
-    
     public void madeWith(String material);
     public void attackTarget(Troops troop);
     
